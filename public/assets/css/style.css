@@ -1,0 +1,68 @@
+body{
+    background-color: aqua;
+}
+
+.judul{
+    color: brown;
+}
+
+@media (min-width: 768px) {
+    .carousel-inner {
+      display: flex;
+    }
+    .carousel-item {
+      margin-right: 0;
+      flex: 0 0 33.333333%;
+      display: block;
+    }
+  }
+
+.carousel-inner{
+    padding: 1em;
+}
+.card{
+    margin: 0 .5em;
+    box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);
+    border: none;
+}
+.carousel-control-prev, .carousel-control-next{
+    background-color: #f81818;
+    width: 6vh;
+    height: 6vh;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.content-buku{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.card{
+  cursor: pointer;
+  display: flex; 
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  background-color: red;
+  /* background-color: #eaeaeaea; */
+  padding: 15px;
+  border-radius: 15px;
+  width: 300px;
+  height: 300px;
+}
+
+.imgcard{
+  width: 50%;
+  border-radius: 5px;
+}
+
+.cardValue{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
