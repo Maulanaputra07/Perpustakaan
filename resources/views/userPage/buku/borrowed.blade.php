@@ -49,13 +49,7 @@
         <div class="container">
         <button class="btn btn-profile position-relative" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">
             <img src="{{ asset('assets/image/kucing.jpg') }}" alt="" class="profile">
-            {{-- <span class="position-absolute start-75 translate-middle p-2 bg-danger border border-light rounded-circle">
-                <span class="visually-hidden">New alerts</span>
-            </span> --}}
         </button>
-        {{-- <a class="btn-profile" href="#">
-                <img src="{{ asset('assets/image/kucing.jpg') }}" alt="" class="profile">
-        </a> --}}
         <a class="navbar-brand" href="#">Perpustaan Online</a>
         <button
             class="navbar-toggler"
@@ -68,9 +62,6 @@
         >
             <span class="navbar-toggler-icon"></span>
         </button>
-
-        
-
         <div class="collapse navbar-collapse" id="navbarNav">
             <div class="mx-auto"></div>
             <ul class="navbar-nav">
@@ -91,21 +82,10 @@
                 <li class="nav-item">
                     
                 </li>
-                
             </ul>
             </div>
         </div>
     </nav>
-
-    <!-- Banner Image  -->
-    {{-- <div
-        class="banner-image w-100 vh-100 d-flex justify-content-center align-items-center"
-    >
-        <div class="content text-center p-5 mb-3">
-            <h1 class="text-light">Perpustakaan Online</h1>
-            <p class="text-light">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officia ipsa sed dolorem officiis placeat fuga quasi nesciunt minima. Consequatur enim quidem vero? Doloribus officia adipisci blanditiis vel, quis repellat distinctio!</p>
-        </div>
-    </div> --}}
 
 
     <div class="container-fluid">
@@ -150,7 +130,6 @@
     @auth
     <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
         <div class="offcanvas-header">
-            {{-- <img src="" alt=""> --}}
             <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">{{auth()->user()->name}}</h5> 
             <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
@@ -160,7 +139,6 @@
                   Dashboard
                 </a>
                 <a href="{{route('peminjaman.index')}}" class="list-group-item list-group-item-action">Buku yang telah dipinjam</a>
-                {{-- <span class="badge rounded-pill">14</span> --}}
                 <a href="{{ route('pengembalian.index') }}" class="list-group-item list-group-item-action">Buku yang dikembalikan</a>
               </div>
         </div>

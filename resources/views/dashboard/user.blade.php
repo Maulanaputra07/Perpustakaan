@@ -40,8 +40,6 @@
             background-color: red;
         }
     </style>
-    {{-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css"> --}}
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 </head>
 <body>
@@ -49,13 +47,7 @@
         <div class="container">
         <button class="btn btn-profile position-relative" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">
             <img src="{{ asset('assets/image/kucing.jpg') }}" alt="" class="profile">
-            {{-- <span class="position-absolute start-75 translate-middle p-2 bg-danger border border-light rounded-circle">
-                <span class="visually-hidden">New alerts</span>
-            </span> --}}
         </button>
-        {{-- <a class="btn-profile" href="#">
-                <img src="{{ asset('assets/image/kucing.jpg') }}" alt="" class="profile">
-        </a> --}}
         <a class="navbar-brand" href="#">Perpustakaan Online</a>
         <button
             class="navbar-toggler"
@@ -118,8 +110,6 @@
                 <h2>DAFTAR BUKU</h2>
 
                 <h5>Lihat semua</h5>
-                {{-- <a href="{{Route('buku.create')}}" class="btn btn-outline-success mb-3"><img width="24" height="24" src="https://img.icons8.com/color/48/add--v1.png" alt="add--v1" style="margin-right: 5px"/>ADD BUKU</a> --}}
-
             </div>
             <div class="content-buku">
                 @foreach ($bukus as $item)
@@ -133,12 +123,6 @@
 
                     <div class="action" style="display: flex">
                         <a href="{{route('buku.show', $item->id_buku)}}" class="btn btn-primary">Pinjam buku</a>
-                        {{-- <a href="{{route('buku.edit', $item->id_buku)}}"class="btn btn-warning" style="margin: 5px">Edit</a> --}}
-                        {{-- <form action="{{route('buku.destroy', $item->id_buku)}}" method="post">
-                            @method('DELETE')
-                            @csrf
-                            <button type="submit" style="margin: 5px" class="btn btn-danger" onclick="return confirm('Are you sure?')">Delete</button>
-                        </form> --}}
                     </div>
                 </div>
                 @endforeach
@@ -146,61 +130,10 @@
         </div>
     </div>
 
-
-    {{-- <div class="list-book">
-        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <div class="card">
-                    <img src="{{ asset('assets/image/kucing.jpg') }}" class="d-block w-30" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title 2</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                            card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                    </div>
-                </div>
-              </div>
-              <div class="carousel-item">
-                <div class="card">
-                    <img src="{{ asset('assets/image/download.jpeg') }}" class="d-block w-100" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title 2</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                            card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                    </div>
-                </div>
-              </div>
-              <div class="carousel-item">
-                <div class="card">
-                    <img src="{{ asset('assets/image/buku.jpg') }}" class="d-block w-100" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title 2</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                            card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                    </div>
-                </div>
-              </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
-            </button>
-          </div>        
-    </div> --}}
-
-
     {{-- offcanvas --}}
     @auth
     <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
         <div class="offcanvas-header">
-            {{-- <img src="" alt=""> --}}
             <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">{{auth()->user()->name}}</h5> 
             <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
@@ -209,10 +142,7 @@
                 <a href="/user" class="list-group-item list-group-item-action" aria-current="true">
                   Dashboard
                 </a>
-                {{-- <a href="{{route('peminjaman.index', ['id_user' => auth()->user()->id])}}" class="list-group-item list-group-item-action">Buku yang telah dipinjam<span class="badge rounded-pill">14</span></a> --}}
                 <a href="{{ route('peminjaman.index') }}" class="list-group-item list-group-item-action">Buku yang dipinjam</a>
-
-
                 <a href="{{ route('pengembalian.index') }}" class="list-group-item list-group-item-action">Buku yang dikembalikan</a>
               </div>
         </div>

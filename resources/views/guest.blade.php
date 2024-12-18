@@ -40,8 +40,6 @@
             background-color: red;
         }
     </style>
-    {{-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css"> --}}
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 </head>
 <body>
@@ -49,13 +47,7 @@
         <div class="container">
         <button class="btn btn-profile position-relative" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">
             <img src="{{ asset('assets/image/kucing.jpg') }}" alt="" class="profile">
-            {{-- <span class="position-absolute start-75 translate-middle p-2 bg-danger border border-light rounded-circle">
-                <span class="visually-hidden">New alerts</span>
-            </span> --}}
         </button>
-        {{-- <a class="btn-profile" href="#">
-                <img src="{{ asset('assets/image/kucing.jpg') }}" alt="" class="profile">
-        </a> --}}
         <a class="navbar-brand" href="#" >Perpustakaan Online</a>
         <button
             class="navbar-toggler"
@@ -87,10 +79,6 @@
                     <a class="nav-link text-dark" href="#"></a>
                 </li>
                 <li class="nav-item">
-                    {{-- <form action="/login" method="POST">
-                        @csrf
-                        <button type="submit" class="btn btn-primary mt-4 mr-5">Login</button>
-                    </form> --}}
                     <a href="/login" class="btn btn-primary">Login</a>
                 </li>
                 <li class="nav-item">
@@ -134,76 +122,12 @@
 
                     <div class="action" style="display: flex">
                         <a href="{{route('buku.show', $item->id_buku)}}" class="btn btn-primary">Pinjam buku</a>
-                        {{-- <a href="{{route('buku.edit', $item->id_buku)}}"class="btn btn-warning" style="margin: 5px">Edit</a> --}}
-                        {{-- <form action="{{route('buku.destroy', $item->id_buku)}}" method="post">
-                            @method('DELETE')
-                            @csrf
-                            <button type="submit" style="margin: 5px" class="btn btn-danger" onclick="return confirm('Are you sure?')">Delete</button>
-                        </form> --}}
                     </div>
                 </div>
                 @endforeach
             </div>
         </div>
     </div>
-
-
-    {{-- <div class="list-book">
-        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <div class="card">
-                    <img src="{{ asset('assets/image/kucing.jpg') }}" class="d-block w-30" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title 2</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                            card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                    </div>
-                </div>
-              </div>
-              <div class="carousel-item">
-                <div class="card">
-                    <img src="{{ asset('assets/image/download.jpeg') }}" class="d-block w-100" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title 2</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                            card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                    </div>
-                </div>
-              </div>
-              <div class="carousel-item">
-                <div class="card">
-                    <img src="{{ asset('assets/image/buku.jpg') }}" class="d-block w-100" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title 2</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                            card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                    </div>
-                </div>
-              </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
-            </button>
-          </div>        
-    </div> --}}
-
-
-    {{-- offcanvas --}}
-    {{--  --}}
-
-    {{-- toast --}}
-    
-    
-
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
     <script src="{{asset('assets/js/crousel.js')}}"></script>
 

@@ -48,7 +48,6 @@
                     @enderror
 	            <div class="form-group">
 	              <input id="password-field" name="password" type="password" class="form-control" placeholder="Password" required>
-	              {{-- <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span> --}}
 	            </div>
                 @error('password')
                         <small>{{ $message }}</small> 
@@ -64,22 +63,11 @@
 								</div>
 	            </div>
 	          </form>
-	          {{-- <p class="w-100 text-center">&mdash; Or Sign In With &mdash;</p>
-	          <div class="social d-flex text-center">
-	          	<a href="#" class="px-2 py-2 mr-md-1 rounded"><span class="ion-logo-facebook mr-2"></span> Facebook</a>
-	          	<a href="#" class="px-2 py-2 ml-md-1 rounded"><span class="ion-logo-twitter mr-2"></span> Twitter</a>
-	          </div> --}}
 		      </div>
 				</div>
 			</div>
 		</div>
 	</section>
-{{-- 
-	<script src="{{ asset('assets/js/jquery.min.js') }}"></script>
-  <script src="{{ asset('assets/js/bootstrap.min.js') }}"></script>
-  <script src="{{ asset('assets/js/main.js') }}"></script>
-  <script src="{{ asset('assets/js/main.js') }}"></script> --}}
-
 	</body>
 </html>
 

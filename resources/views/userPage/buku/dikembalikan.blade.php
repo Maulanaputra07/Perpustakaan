@@ -40,8 +40,6 @@
             background-color: red;
         }
     </style>
-    {{-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css"> --}}
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 </head>
 <body>
@@ -49,13 +47,7 @@
         <div class="container">
         <button class="btn btn-profile position-relative" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">
             <img src="{{ asset('assets/image/kucing.jpg') }}" alt="" class="profile">
-            {{-- <span class="position-absolute start-75 translate-middle p-2 bg-danger border border-light rounded-circle">
-                <span class="visually-hidden">New alerts</span>
-            </span> --}}
         </button>
-        {{-- <a class="btn-profile" href="#">
-                <img src="{{ asset('assets/image/kucing.jpg') }}" alt="" class="profile">
-        </a> --}}
         <a class="navbar-brand" href="#">Perpustaan Online</a>
         <button
             class="navbar-toggler"
@@ -97,16 +89,6 @@
         </div>
     </nav>
 
-    <!-- Banner Image  -->
-    {{-- <div
-        class="banner-image w-100 vh-100 d-flex justify-content-center align-items-center"
-    >
-        <div class="content text-center p-5 mb-3">
-            <h1 class="text-light">Perpustakaan Online</h1>
-            <p class="text-light">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officia ipsa sed dolorem officiis placeat fuga quasi nesciunt minima. Consequatur enim quidem vero? Doloribus officia adipisci blanditiis vel, quis repellat distinctio!</p>
-        </div>
-    </div> --}}
-
 
     <div class="container-fluid">
         <div class="col-md-12 mt-5">
@@ -123,13 +105,6 @@
                         <p class="judul_buku" style="font-size: 15px; margin: 5px;">{{$item->penulis}}</p>
                         <p style="font-size: 17px;">{{$item->judul_buku}}</p>
                     </div>
-
-                    {{-- @auth
-                        <form action="{{ route('pengembalian.store', ['idUser' => auth()->user()->id, 'id_buku'=>$item->id_buku, 'id_peminjaman'=>$item->id_peminjaman ]) }}" method="POST">
-                            @csrf
-                            <button type="submit" class="btn btn-primary"> Kembalikan </button>
-                        </form>
-                    @endauth --}}
                 </div>
                 @endforeach
             </div>

@@ -29,7 +29,6 @@ use Illuminate\Support\Facades\Storage;
 // Route::middleware(['guest'])->group(function() {
 // });
 Route::get('/', function () {
-    // return view('adminPage.buku.post', ['genres'=>genre::all()]);
     return view('guest', ['bukus'=>buku::all()]);
 });
 
@@ -57,24 +56,9 @@ Route::post('/logout', [logincontroller::class,'logout']);
 Route::get('/user/dashboard', function(){
     return view('');
 });
-// Route::get('/login', [LoginController::class, 'index'])->name('login');
-// Route::post('/login_proses', [LoginController::class, 'login_proses'])->name('login_proses');
-// Route::post('/logout', [LoginController::class, 'logout']);
 
 Route::get('/register', [RegisterController::class, 'create']);
 Route::post('/register', [RegisterController::class, 'store']);
-
-// Route::middleware(['Auth'])->group(function () {
-// });
-
-// Route::get('/admin/dashboard', function () {
-//     return view('dashboard.admin');
-// });
-
-// Route::get('/user/dashboard', function () {
-//     return view('dashboard.user', ["bukus"=>buku::all()]);
-// });
-
 Route::get('/admin/genre', function(){
     return view('adminPage.genre.index', ['genres'=>genre::all()]);
 });
@@ -95,9 +79,6 @@ Route::delete('/buku/{id_buku}', [BukuController::class, 'destroy'])->name('buku
 
 
 Route::get('/view-pdf/{filePath}', function ($filePath) {
-    
-    // $filePath = 'public/assets/file/PkeZZ2PqPuhP00u1yN3OoYxzOETTX02TjbVnR30x.pdf';
-
     if (Storage::exists($filePath)) {
         return response()->file(storage_path("app/$filePath"));
     } else {
@@ -106,17 +87,3 @@ Route::get('/view-pdf/{filePath}', function ($filePath) {
 })->name('viewPdf');
 
 Route::post('/peminjaman/store/{idUser}/{id_buku}', [PeminjamanController::class, 'store'])->name('peminjaman.store');
-
-// Route::get('/peminjaman/{id_user}', [PeminjamanController::class, 'index'])->name('peminjaman.index');
-
-
-// Route::get('/admin', function(){
-//     return view('dashboard'); 
-// })->middleware('auth'); 
-
-// Route::get('/user', function(){
-//     return view('dashboard.user'); 
-// }); 
-
-// Route::middleware(['auth'])->group(function() {    
-// });

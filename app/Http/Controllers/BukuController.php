@@ -148,10 +148,6 @@ class BukuController extends Controller
 
         return redirect('/admin/buku')->with('success', 'berhasil update buku');
     }
-
-    /**
-     * Remove the specified resource from storage.
-     */
     public function destroy(string $id_buku)
     {
         //
